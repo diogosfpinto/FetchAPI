@@ -1,20 +1,12 @@
-const informacoesClientes = [
-    {
-        cpf: 00765343088,
-        nome: "Ronaldo"
-    },
-    {
-        cpf: 00765343088,
-        nome: "Monica"
-    }
-];
-
- 
+fetch('http://localhost:4000/clientes')
+.then(resposta => {
+    return resposta.json()
+})
+.then( json => {
+    return console.log(json);
+})
 
 const corpoTabela = document.querySelector("[data-conteudo-tabela]");
-
-console.log(corpoTabela);
-
 
 
 //Aero Function
